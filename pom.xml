@@ -14,8 +14,8 @@
 	<name>webme</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>18</java.version>
-		<maven.compiler.release>18</maven.compiler.release>
+		<java.version>17</java.version>
+		<maven.compiler.release>17</maven.compiler.release>
 	</properties>
 	<dependencies>
 
@@ -47,6 +47,32 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<from>
+						<image>openjdk:18-jdk-alpine</image>
+					</from>
+					<to>
+						<auth>
+							<username>mohayadeen</username>
+							<password>moi@1982</password>
+						</auth>						
+						<image>registry.hub.docker.com/mohayadeen/webme</image>
+					</to>
+					<!-- <extraDirectories>
+    					<paths>
+							<path>
+								<from>target</from>
+        						<into>/app.jar</into>
+        						<includes>*.jar</includes>
+							</path>
+						</paths>
+					</extraDirectories>	
+				</configuration> -->
 			</plugin>
 		</plugins>
 	</build>

@@ -71,8 +71,8 @@
         						<includes>*.jar</includes>
 							</path>
 						</paths>
-					</extraDirectories>	
-				</configuration> -->
+					</extraDirectories>	-->
+				</configuration> 
 			</plugin>
 		</plugins>
 	</build>
